@@ -14,10 +14,11 @@ class BodyContainer extends React.Component {
     }
 
     handleButton(color){
-        if(color === 'red'){
-            this.setState({ modalOpen: true, title: 'Red', bodyText: 'Red button is triggered', backgroundColor: 'linear-gradient(red, orange)'})
-        }else if(color === 'blue'){
-            this.setState({ modalOpen: true, title: 'Blue', bodyText: 'Blue button is triggered', backgroundColor: 'linear-gradient(blue, cyan)'})
+        switch(color){
+            case 'red':
+                return this.setState({ modalOpen: true, title: 'Red', bodyText: 'Red button is triggered', backgroundColor: 'linear-gradient(red, orange)'})
+            case 'blue':
+                return this.setState({ modalOpen: true, title: 'Blue', bodyText: 'Blue button is triggered', backgroundColor: 'linear-gradient(blue, cyan)'})
         }
     }
 
